@@ -18,7 +18,7 @@ public class MySqlConnexion {
 
 	public static Connection instance = null;
 
-	// C'est obsolète dans les dernières version de mysql : TESSSSSSSSSSSSSST
+	// C'est obsolète dans les dernières version de mysql :
 	private static final String DRIVER_CLASS_NAME = "com.mysql.jdbc.Driver";
 
 	// appel iut ..local host -> infodb.iutmetz.univ-lorraine.fr
