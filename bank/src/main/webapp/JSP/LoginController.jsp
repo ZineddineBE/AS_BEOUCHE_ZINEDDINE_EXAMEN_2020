@@ -39,6 +39,25 @@
 			<!--<s:hidden name="client" value = "%{clientConnecte}"/>-->
 			<s:submit name="Comptes" value="Voir la liste des comptes" />
 		</s:form>
+		
+		<s:select label="Comptes"
+	       name="petIds"
+	       list="mySqlDaoCompte.getComptesByClient(id)"
+	       listKey="id"
+	       listValue="name"
+	       multiple="true"
+	       size="10"
+	       required="true"
+	       value="%{mySqlDaoCompte..getComptesByClient(id).{id}}"
+		/>
+		
+		<s:select label="Months"
+	       name="months"
+	       headerKey="-1" headerValue="Select Month"
+	       list="#{'01':'Jan', '02':'Feb', [...]}"
+	       value="selectedMonth"
+	       required="true"
+		/>
 	</s:else>
 </body>
 </html>
